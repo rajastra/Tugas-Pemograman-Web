@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Halaman produk</title>
+</head>
+<style>
+	* {
+		padding: 0;
+		margin: 0;
+		box-sizing: inherit;
+		font-size: inherit;
+	}
+
+	html {
+		font-size: 62.5%;
+		box-sizing: border-box;
+	}
+
+	body,
+	html {
+		height: 100%;
+	}
+
+	body {
+		font-family: sans-serif;
+		background-color: #674747;
+	}
+
+	.header {
+		text-align: center;
+		padding: 1rem;
+		color: white;
+	}
+
+	.header__title {
+		font-size: 2.5rem;
+	}
+
+	.header__description {
+		font-size: 1.3rem;
+	}
+
+	#form-produk {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 1rem;
+		max-width: 50rem;
+		margin: 0 auto;
+		padding: 2rem 3rem;
+		background-color: white;
+	}
+
+	.form input {
+		font-family: inherit;
+		font-size: 1.3rem;
+		padding: .75rem 1rem;
+	}
+
+	.form label {
+		font-family: inherit;
+		font-size: 1.6rem;
+	}
+
+	.form select {
+		font-size: 1.3rem;
+		padding: .75rem 1rem;
+	}
+
+	.form span {
+		font-size: 1.2rem;
+		margin-top: -.85rem;
+	}
+
+	.keterangan {
+		font-size: 1.6rem;
+	}
+
+	.keterangan textarea {
+		width: 100%;
+		height: 100px;
+		padding: 12px 20px;
+		border-radius: 4px;
+		font-size: 16px;
+		font-family: inherit;
+		resize: none;
+	}
+
+	.keterangan p {
+		margin-bottom: 1rem;
+	}
+
+	.form button {
+		display: inline-block;
+		background-color: #829460;
+		font-size: 1.6rem;
+		font-family: inherit;
+		font-weight: 500;
+		border: none;
+		padding: 1.25rem 4.5rem;
+		border-radius: 10rem;
+		cursor: pointer;
+		transition: all 0.3s;
+		align-self: center;
+		color: white;
+	}
+
+	.m-top-s {
+		margin-top: 1rem;
+	}
+</style>
+
+<body>
+	<header class="header">
+		<h1 class="header__title">Form Produk</h1>
+		<p class="header__description">Silahkan mengisi form di bawah ini</p>
+	</header>
+	<form action="detail.html" method="get" class="form" id="form-produk">
+		<label for="nama">Nama Produk</label>
+		<input type="text" name="nama" id="nama">
+		<label for="harga">Harga produk(Rp.)</label>
+		<input type="number" name="harga" id="harga">
+		<label for="jenis">Jenis produk</label>
+		<select name="jenis" id="jenis">
+			<option value="pakaian">pakaian</option>
+			<option value="makanan">makanan</option>
+			<option value="elektronik">elektronik</option>
+			<option value="lainnya">lainnya</option>
+		</select>
+		<label for="jumlah">jumlah barang</label>
+		<input type="number">
+		<div class="keterangan">
+			<p>Tuliskan ketangan tambahan :</p>
+			<textarea name="keterangan" placeholder="keterangan produk"></textarea>
+		</div>
+		<button>Submit</button>
+	</form>
+</body>
+
+</html>
